@@ -1,9 +1,29 @@
 body{
-	color: blue;
+	background-color: black;
 }
 h1 {
   color: blue;
 }
 p {
   color: red;
+}
+
+nav {
+	background-color: mintcream;
+	color: white;
+	text-align: center;
+	padding: 14px 0px 14px 0px;
+	text-decoration: none;
+}
+
+nav a {
+		display: inline;
+		color: peachpuff;
+		text-decoration: none;
+		padding: 14px 16px;
+		text-align: center;
+}
+
+nav a:hover {
+	background-color: cornsilk;
 }
