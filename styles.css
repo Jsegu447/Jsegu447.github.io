@@ -1,29 +1,53 @@
 body{
-	background-color: black;
+	background: linear-gradient(rebeccapurple,skyblue);
 }
-h1 {
-  color: blue;
-}
-p {
-  color: red;
+header nav{
+	display: flex;
+	padding: 15px 10px;
+	align-items: center;
+	justify-content: center;
+
 }
 
-nav {
-	background-color: mintcream;
-	color: white;
-	text-align: center;
-	padding: 14px 0px 14px 0px;
+header nav a{
+	padding: 10px 15px;
 	text-decoration: none;
+	color: white;
+	border-radius: 10px;
 }
 
-nav a {
-		display: inline;
-		color: peachpuff;
-		text-decoration: none;
-		padding: 14px 16px;
-		text-align: center;
+header nav a:hover, header nav a.active{
+	background: white;
+	color: rebeccapurple;
 }
 
-nav a:hover {
-	background-color: cornsilk;
+#name{
+	display: flex;
+	justify-items: center;
+	text-align: center;
+	font-size: 50px;
+	position: relative;
 }
+#name section {
+  position: absolute;
+  color: #fff;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#name p {
+  position: absolute;
+  color: #fff;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  top: calc(10%); /* Adjust the value (50px) to control the vertical distance */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
