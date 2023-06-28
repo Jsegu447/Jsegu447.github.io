@@ -1,7 +1,7 @@
 body{
 	background: linear-gradient(rebeccapurple,skyblue);
 }
-header nav{
+nav{
 	display: flex;
 	padding: 15px 10px;
 	align-items: center;
@@ -9,14 +9,14 @@ header nav{
 
 }
 
-header nav a{
+nav a{
 	padding: 10px 15px;
 	text-decoration: none;
 	color: white;
 	border-radius: 10px;
 }
 
-header nav a:hover, header nav a.active{
+nav a:hover, nav a.active{
 	background: white;
 	color: rebeccapurple;
 }
