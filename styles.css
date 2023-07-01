@@ -1,5 +1,13 @@
-body{
-	background: linear-gradient(rebeccapurple,skyblue);
+@import url(https://fonts.googleapis.com/css?family=Space+Mono);
+
+@font-face {
+	font-family: Raskhal;
+	src: url(RASKHAL.ttf);
+}
+
+
+body {
+	background: linear-gradient(#0a0c37ff,#ff61c6ff)
 }
 nav{
 	display: flex;
@@ -12,25 +20,27 @@ nav{
 nav a{
 	padding: 10px 15px;
 	text-decoration: none;
-	color: white;
+	color: #ff61c6ff;
 	border-radius: 10px;
 }
 
 nav a:hover, nav a.active{
-	background: white;
-	color: rebeccapurple;
+	background: #5cecffff;
+	color: #0a0c37ff;
 }
 
-#name{
+#prompt {
+	top: 40px;
 	display: flex;
 	justify-items: center;
 	text-align: center;
 	font-size: 50px;
 	position: relative;
 }
-#name section {
+#prompt section {
+	font-family: Raskhal;
   position: absolute;
-  color: #fff;
+  color: #ff61c6ff;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
@@ -39,15 +49,40 @@ nav a:hover, nav a.active{
   transform: translate(-50%, -50%);
 }
 
-#name p {
+#prompt p {
+	font-family: Raskhal;
   position: absolute;
-  color: #fff;
+  color: #5cecffff;
   padding: 0;
   width: 100%;
   box-sizing: border-box;
-  top: calc(10%); /* Adjust the value (50px) to control the vertical distance */
+  top: calc(10%); 
   left: 50%;
   transform: translateX(-50%);
+}
+
+#mainBod {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: #0a0c37ff;
+	position: relative;
+	top: 15%;
+}
+
+#mainBod h1{
+	font-family: Space Mono;
+	font-size: 80px;
+}
+
+#intro {
+	color: #0a0c37ff;
+	font-family: Space Mono;
+	position: relative;
+	top: 50px;
+	text-align: center;
+	font-size: 20px;
 }
 
 
