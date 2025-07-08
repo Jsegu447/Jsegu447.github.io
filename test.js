@@ -6,10 +6,10 @@ function getRandomLetter() {
  return alphabet[rand(0,alphabet.length - 1)]
 }
 function getRandomWord(word) {
-  var text = word.innerHTML
+  //var text = word.innerHTML
   
   var finalWord = ''
-  for(var i=0;i<text.length;i++) {
+  for(var i=0;i<word.length;i++) {
     finalWord += text[i] == ' ' ? ' ' : getRandomLetter()
   }
  
@@ -29,7 +29,7 @@ async function init(newWord) {
   if (isGoing) return;
   INITIAL_WORD = newWord;
   isGoing = true;
-  var randomWord = getRandomWord(word);
+  var randomWord = getRandomWord(newWord);
   word.innerHTML = randomWord;
 
   return new Promise((resolve) => {
@@ -46,7 +46,7 @@ async function init(newWord) {
       if (canChange) {
         count++;
       }
-      if (globalCount >= 10) {
+      if (globalCount >= 5) {
         canChange = true;
       }
       if (count >= INITIAL_WORD.length) {

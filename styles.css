@@ -1,88 +1,110 @@
-@import url(https://fonts.googleapis.com/css?family=Space+Mono);
-
-@font-face {
-	font-family: Raskhal;
-	src: url(./Raskhal.ttf);
-}
-
-
 body {
-	background: linear-gradient(#0a0c37ff,#ff61c6ff)
-}
-nav{
-	display: flex;
-	padding: 15px 10px;
-	align-items: center;
-	justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Orbitron', monospace;
+    background: #302b63;
+    color: #fff;
+    
+  }
 
-}
+  /*
+  #neon-sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(#ff00ff, #ff6600);
+    box-shadow: 0 0 50px #ff00ff, 0 0 100px #ff6600;
+    opacity: 0.8;
+    animation: hue-rotate 60s ease-in-out infinite 5s;
+  }
+    */
+  #topBack{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: #0a0c37ff;
+  }
 
-nav a{
-	padding: 10px 15px;
-	text-decoration: none;
-	color: #ff61c6ff;
-	border-radius: 10px;
-}
+  #bottomBack{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, .5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, 0.5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px); 
+    background-size: 4em 2em, 4em 2em;
+    background-color: #0a0c37ff;
+    perspective: 1000px;
+    transform: perspective(200px) rotateX(45deg) scale(2);
+  }
+  #neon-sun {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(#f4ff61ff, #ff61c6ff);
+    box-shadow: 0 0 50px #f4ff61ff, 0 0 100px #ff61c6ff;
+    opacity: 0.8;
+    overflow:hidden;
+  }
 
-nav a:hover, nav a.active{
-	background: #5cecffff;
-	color: #0a0c37ff;
-}
+  #interrupts {
+    position: absolute;
+    top: 50%;
+    height: 8px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d3245854; /* use background: transparent if masking */
+    animation: riseAndShrink 2s linear infinite;
+    transform-origin: center;
+  }
 
-#prompt {
-	top: 40px;
-	display: flex;
-	justify-items: center;
-	text-align: center;
-	font-size: 50px;
-	position: relative;
-}
-#prompt section {
-	font-family: Raskhal;
-  position: absolute;
-  color: #ff61c6ff;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#prompt p {
-	font-family: Raskhal;
-  position: absolute;
-  color: #5cecffff;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-  top: calc(10%); 
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#mainBod {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	color: #0a0c37ff;
-	position: relative;
-	top: 15%;
-}
-
-#mainBod h1{
-	font-family: Space Mono;
-	font-size: 80px;
-}
-
-#intro {
-	color: #0a0c37ff;
-	font-family: Space Mono;
-	position: relative;
-	top: 50px;
-	text-align: center;
-	font-size: 20px;
-}
+  #content{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 50%;
+  }
+  @keyframes riseAndShrink {
+    0% {
+      top: 50%;
+      opacity: 1;
+    }
+    100% {
+      top: 0%;
+      width: 15%;
+      opacity: 0.2;
+    }
+  }
 
 
+  @keyframes hue-rotate {
+    0% {
+      filter: hue-rotate(360deg);
+    }
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  
+
+
+  /*
+  color list:
+  #ff61c6ff magenta 
+  #5cecffff aqua
+  #f4ff61ff yellow
+  #ff9900ff orange
+  #375971ff greyish
+  #0a0c37ff blue
+
+  */
